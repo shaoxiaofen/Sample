@@ -17,7 +17,7 @@ namespace CourseManager.Controllers
             ViewData["SiteInfo"] = siteinfo;
                    
 
-            return View("~/Views/Home/View1.cshtml");
+            return View();
 
         }
 

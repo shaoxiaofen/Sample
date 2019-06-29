@@ -4,43 +4,15 @@
      ViewBag.Title = "主页";
      var siteInfoFromView =(Websiteinfo) ViewBag.siteInfo;
      var siteInfoFromData = (Websiteinfo)ViewData["SiteInfo"];
+     var name = "GOGOGO";
       
 }
-    <section class="featured">
-        <div class="content-wrapper">
-            <hgroup class="title">
-                <h1>@Model.SiteName</h1>
-                <h2>@ViewBag.Message</h2>
-            </hgroup>
-            <p>
-               @Model.CopyRight
-            </p>
-            </div>
-        </section>
-
- <section class="featured">
-        <div class="content-wrapper">
-            <hgroup class="title">
-                <h1>@siteInfoFromView.SiteName</h1>
-                <h2>@ViewBag.Message</h2>
-            </hgroup>
-            <p>
-               @siteInfoFromView.CopyRight
-            </p>
-            </div>
-        </section>
-
-<section class="featured">
-        <div class="content-wrapper">
-            <hgroup class="title">
-                <h1>@siteInfoFromData.SiteName</h1>
-                <h2>@ViewBag.Message</h2>
-            </hgroup>
-            <p>
-               @siteInfoFromData.CopyRight
-            </p>
-            </div>
-        </section>
-
+@using (Html.BeginForm("", "", FormMethod.Get))
+{ 
+    @Html.Password("Passwd")
+      @Html.ActionLink("Home","Home")
+}
+@Html.Partial("MyNamePartialView")
+<h1>fsa @name</h1>
 
 
